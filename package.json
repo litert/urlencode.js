@@ -1,0 +1,48 @@
+{
+  "name": "@litert/urlencode",
+  "version": "0.1.0",
+  "description": "A simple URL encoding/decoding utilities library.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run rebuild",
+    "build": "echo Using TypeScript && tsc -v && tsc -p .",
+    "build-watch": "echo Using TypeScript && tsc -v && tsc -w -p .",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "test": "mocha",
+    "clean": "rm -rf lib examples test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint --ext ts src",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "litert",
+    "lrt",
+    "url",
+    "querystring"
+  ],
+  "author": "Angus.Fenying <fenying@litert.org> (https://fenying.net)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litert/urlencode.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litert/urlencode.js/issues"
+  },
+  "homepage": "https://github.com/litert/urlencode.js#readme",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@litert/eslint-plugin-rules": "^0.1.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.15",
+    "husky": "^8.0.1",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
