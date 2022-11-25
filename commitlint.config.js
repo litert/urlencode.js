@@ -13,6 +13,7 @@ module.exports = {
             'doc',
             'lint',
             'project',
+            'deps',
             'branch',
             'global'
         ]],
